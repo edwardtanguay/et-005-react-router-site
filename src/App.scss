@@ -5,7 +5,10 @@ body {
 	padding: 0 1rem;
 
 	h1 {
-		color: rgb(209, 168, 85);
+		a {
+			color: rgb(209, 168, 85);
+			text-decoration: none;
+		}
 	}
 
 	nav {
