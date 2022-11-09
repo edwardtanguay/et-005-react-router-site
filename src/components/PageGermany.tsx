@@ -1,4 +1,4 @@
-import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
+import { NavLink, Routes, Route } from 'react-router-dom';
 import { PageBerlin } from './PageBerlin';
 import { PageHamburg } from './PageHamburg';
 import { PageHannover } from './PageHannover';
@@ -9,7 +9,7 @@ export const PageGermany = () => {
 			<p>
 				Germany officially the Federal Republic of Germany, is a country
 				in Central Europe. It is the second most populous country in
-				Europe after Russia.
+				Europe after Russia. Be sure to visit cities like <NavLink to="/germany/hamburg">Hamburg</NavLink> or the <NavLink to="/germany/berlin/mitte/brandenburgGate">Brandenburg Gate</NavLink>.
 			</p>
 			<nav>
 				<NavLink to="hamburg">Hamburg</NavLink>
@@ -20,7 +20,6 @@ export const PageGermany = () => {
 				<Route path="hamburg" element={<PageHamburg />} />
 				<Route path="hannover" element={<PageHannover />} />
 				<Route path="berlin/*" element={<PageBerlin />} />
-				<Route path="/" element={<Navigate to="hamburg" replace />} />
 			</Routes>
 		</>
 	);

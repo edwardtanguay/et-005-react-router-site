@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="App">
 			<h1>
-				<NavLink to="info">React Router Site</NavLink>
+				<NavLink to="info">Travel Info Site</NavLink>
 			</h1>
 			<nav>
 				<NavLink to="germany">Germany</NavLink>
@@ -22,7 +22,7 @@ function App() {
 				<Route path="germany/*" element={<PageGermany />} />
 				<Route path="france" element={<PageFrance />} />
 				<Route path="spain" element={<PageSpain />} />
-				<Route path="/" element={<Navigate to="germany" replace />} />
+				<Route path="/" element={<Navigate to="info" replace />} />
 			</Routes>
 		</div>
 	);

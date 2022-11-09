@@ -17,10 +17,6 @@ export const PageBerlin = () => {
 				<Route path="tiergarten" element={<PageTiergarten />} />
 				<Route path="steglitz" element={<PageSteglitz />} />
 				<Route path="mitte/*" element={<PageMitte />} />
-				<Route
-					path="/"
-					element={<Navigate to="tiergarten" replace />}
-				/>
 			</Routes>
 		</>
 	);

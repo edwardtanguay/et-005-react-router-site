@@ -1,7 +1,8 @@
 export const PageInfo = () => {
 	return (
 		<>
-			<p>Please click on the areas of your interest.</p>
+			<p>We hope you enjoy this site.</p>
+			<img src="/images/map.png"/>			
 		</>
 	);
 };

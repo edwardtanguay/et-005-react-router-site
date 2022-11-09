@@ -23,10 +23,7 @@ export const PageMitte = () => {
 					element={<PageBrandenburgGate />}
 				/>
 				<Route path="unterDenLinden" element={<PageUnterDenLinden />} />
-				<Route
-					path="/"
-					element={<Navigate to="checkpointCharlie" replace />}
-				/>
+				
 			</Routes>
 		</>
 	);
