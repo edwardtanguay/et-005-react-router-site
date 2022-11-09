@@ -4,6 +4,9 @@ import { PageBlank } from './PageBlank';
 import { PageMitte } from './PageMitte';
 import { PageSteglitz } from './PageSteglitz';
 import { PageTiergarten } from './PageTiergarten';
+import { PageBrandenburgGate } from './PageBrandenburgGate';
+import { PageCheckpointCharlie } from './PageCheckpointCharlie';
+import { PageUnterDenLinden } from './PageUnterDenLinden';
 
 export const PageBerlin = () => {
 	return (
@@ -18,7 +21,21 @@ export const PageBerlin = () => {
 			<Routes>
 				<Route path="tiergarten" element={<PageTiergarten />} />
 				<Route path="steglitz" element={<PageSteglitz />} />
-				<Route path="mitte/*" element={<PageMitte />} />
+				<Route path="/mitte/" element={<PageMitte />}>
+					<Route
+						path="/mitte/checkpointCharlie"
+						element={<PageCheckpointCharlie />}
+					/>
+					<Route
+						path="/mitte/brandenburgGate"
+						element={<PageBrandenburgGate />}
+					/>
+					<Route
+						path="/mitte/unterDenLinden"
+						element={<PageUnterDenLinden />}
+					/>
+					<Route path="*" element={<Page404 />} />
+				</Route>
 				<Route path="/" element={<PageBlank />} />
 				<Route path="*" element={<Page404 />} />
 			</Routes>
