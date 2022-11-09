@@ -4,6 +4,7 @@ import { PageGermany } from './components/PageGermany';
 import { PageFrance } from './components/PageFrance';
 import { PageSpain } from './components/PageSpain';
 import { PageInfo } from './components/PageInfo';
+import { Page404 } from './components/Page404';
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 				<Route path="france" element={<PageFrance />} />
 				<Route path="spain" element={<PageSpain />} />
 				<Route path="/" element={<Navigate to="info" replace />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</div>
 	);

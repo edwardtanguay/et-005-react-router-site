@@ -1,4 +1,6 @@
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
+import { Page404 } from './Page404';
+import { PageBlank } from './PageBlank';
 import { PageBrandenburgGate } from './PageBrandenburgGate';
 import { PageCheckpointCharlie } from './PageCheckpointCharlie';
 import { PageUnterDenLinden } from './PageUnterDenLinden';
@@ -23,7 +25,8 @@ export const PageMitte = () => {
 					element={<PageBrandenburgGate />}
 				/>
 				<Route path="unterDenLinden" element={<PageUnterDenLinden />} />
-				
+				<Route path="/" element={<PageBlank />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</>
 	);
