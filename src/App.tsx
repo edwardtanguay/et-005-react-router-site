@@ -5,6 +5,12 @@ import { PageFrance } from './components/PageFrance';
 import { PageSpain } from './components/PageSpain';
 import { PageInfo } from './components/PageInfo';
 import { Page404 } from './components/Page404';
+import _cities from './data/spanishCities.json';
+import { City } from './components/City';
+import { ICity } from './interfaces';
+import { CityChooseMessage } from './components/CityChooseMessage';
+
+const cities: ICity[] = _cities;
 
 function App() {
 	return (
@@ -22,7 +28,10 @@ function App() {
 				<Route path="info" element={<PageInfo />} />
 				<Route path="germany/*" element={<PageGermany />} />
 				<Route path="france" element={<PageFrance />} />
-				<Route path="spain" element={<PageSpain />} />
+				<Route path="spain" element={<PageSpain cities={cities} />}>
+					<Route path=":idCode" element={<City />} />
+					<Route index element={<CityChooseMessage />} />
+				</Route>
 				<Route path="/" element={<Navigate to="info" replace />} />
 				<Route path="*" element={<Page404 />} />
 			</Routes>
